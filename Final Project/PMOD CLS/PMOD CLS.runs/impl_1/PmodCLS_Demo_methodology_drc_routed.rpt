@@ -1,0 +1,410 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+| Date         : Fri Dec  6 21:59:49 2024
+| Host         : Daniels-Desktop running 64-bit major release  (build 9200)
+| Command      : report_methodology -file PmodCLS_Demo_methodology_drc_routed.rpt -pb PmodCLS_Demo_methodology_drc_routed.pb -rpx PmodCLS_Demo_methodology_drc_routed.rpx
+| Design       : PmodCLS_Demo
+| Device       : xc7z010clg400-1
+| Speed File   : -1
+| Design State : Fully Routed
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 74
++-----------+------------------+----------------------------------------------------+------------+
+| Rule      | Severity         | Description                                        | Violations |
++-----------+------------------+----------------------------------------------------+------------+
+| TIMING-4  | Critical Warning | Invalid primary clock redefinition on a clock tree | 1          |
+| TIMING-6  | Critical Warning | No common primary clock between related clocks     | 1          |
+| TIMING-7  | Critical Warning | No common node between related clocks              | 1          |
+| TIMING-27 | Critical Warning | Invalid primary clock on hierarchical pin          | 1          |
+| TIMING-16 | Warning          | Large setup violation                              | 69         |
+| TIMING-18 | Warning          | Missing input or output delay                      | 1          |
++-----------+------------------+----------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+TIMING-4#1 Critical Warning
+Invalid primary clock redefinition on a clock tree  
+Invalid clock redefinition on a clock tree. The primary clock syscon/clk_wizard/inst/clk_in1 is defined downstream of clock sys_clk_pin and overrides its insertion delay and/or waveform definition
+Related violations: <none>
+
+TIMING-6#1 Critical Warning
+No common primary clock between related clocks  
+The clocks sys_clk_pin and clk_out1_clk_wiz_0 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks sys_clk_pin] -to [get_clocks clk_out1_clk_wiz_0]
+Related violations: <none>
+
+TIMING-7#1 Critical Warning
+No common node between related clocks  
+The clocks sys_clk_pin and clk_out1_clk_wiz_0 are related (timed together) but they have no common node. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks sys_clk_pin] -to [get_clocks clk_out1_clk_wiz_0]
+Related violations: <none>
+
+TIMING-27#1 Critical Warning
+Invalid primary clock on hierarchical pin  
+A primary clock syscon/clk_wizard/inst/clk_in1 is created on an inappropriate internal pin syscon/clk_wizard/inst/clk_in1. It is not recommended to create a primary clock on a hierarchical pin when its driver pin has a fanout connected to multiple clock pins
+Related violations: <none>
+
+TIMING-16#1 Warning
+Large setup violation  
+There is a large setup violation of -3.303 ns between syscon/reset_counter_reg[31]/C (clocked by sys_clk_pin) and C1/mosi_reg/S (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#2 Warning
+Large setup violation  
+There is a large setup violation of -3.398 ns between syscon/reset_counter_reg[31]/C (clocked by sys_clk_pin) and C0/send_data_reg[1]/R (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#3 Warning
+Large setup violation  
+There is a large setup violation of -3.398 ns between syscon/reset_counter_reg[31]/C (clocked by sys_clk_pin) and C0/send_data_reg[2]/R (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#4 Warning
+Large setup violation  
+There is a large setup violation of -3.398 ns between syscon/reset_counter_reg[31]/C (clocked by sys_clk_pin) and C0/send_data_reg[3]/R (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#5 Warning
+Large setup violation  
+There is a large setup violation of -3.398 ns between syscon/reset_counter_reg[31]/C (clocked by sys_clk_pin) and C0/send_data_reg[4]/R (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#6 Warning
+Large setup violation  
+There is a large setup violation of -3.445 ns between syscon/reset_counter_reg[31]/C (clocked by sys_clk_pin) and C1/shift_register_reg[0]/R (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#7 Warning
+Large setup violation  
+There is a large setup violation of -3.445 ns between syscon/reset_counter_reg[31]/C (clocked by sys_clk_pin) and C1/shift_register_reg[1]/R (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#8 Warning
+Large setup violation  
+There is a large setup violation of -3.445 ns between syscon/reset_counter_reg[31]/C (clocked by sys_clk_pin) and C1/shift_register_reg[2]/R (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#9 Warning
+Large setup violation  
+There is a large setup violation of -3.445 ns between syscon/reset_counter_reg[31]/C (clocked by sys_clk_pin) and C1/shift_register_reg[3]/R (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#10 Warning
+Large setup violation  
+There is a large setup violation of -3.449 ns between syscon/reset_counter_reg[31]/C (clocked by sys_clk_pin) and C1/shift_register_reg[4]/R (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#11 Warning
+Large setup violation  
+There is a large setup violation of -3.449 ns between syscon/reset_counter_reg[31]/C (clocked by sys_clk_pin) and C1/shift_register_reg[5]/R (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#12 Warning
+Large setup violation  
+There is a large setup violation of -3.449 ns between syscon/reset_counter_reg[31]/C (clocked by sys_clk_pin) and C1/shift_register_reg[6]/R (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#13 Warning
+Large setup violation  
+There is a large setup violation of -3.499 ns between syscon/reset_counter_reg[31]_replica/C (clocked by sys_clk_pin) and C0/count_sel_reg[1]/R (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#14 Warning
+Large setup violation  
+There is a large setup violation of -3.499 ns between syscon/reset_counter_reg[31]_replica/C (clocked by sys_clk_pin) and C0/count_sel_reg[2]/R (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#15 Warning
+Large setup violation  
+There is a large setup violation of -3.499 ns between syscon/reset_counter_reg[31]_replica/C (clocked by sys_clk_pin) and C0/count_sel_reg[3]/R (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#16 Warning
+Large setup violation  
+There is a large setup violation of -3.499 ns between syscon/reset_counter_reg[31]_replica/C (clocked by sys_clk_pin) and C0/count_sel_reg[4]/R (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#17 Warning
+Large setup violation  
+There is a large setup violation of -3.499 ns between syscon/reset_counter_reg[31]_replica/C (clocked by sys_clk_pin) and C0/count_sel_reg[5]/R (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#18 Warning
+Large setup violation  
+There is a large setup violation of -3.501 ns between syscon/reset_counter_reg[31]_replica/C (clocked by sys_clk_pin) and C1/shift_register_reg[7]/R (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#19 Warning
+Large setup violation  
+There is a large setup violation of -3.504 ns between syscon/reset_counter_reg[31]_replica/C (clocked by sys_clk_pin) and C0/count_sel_reg[0]/R (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#20 Warning
+Large setup violation  
+There is a large setup violation of -3.540 ns between syscon/reset_counter_reg[31]/C (clocked by sys_clk_pin) and C1/FSM_onehot_RxTxSTATE_reg[2]/R (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#21 Warning
+Large setup violation  
+There is a large setup violation of -3.544 ns between syscon/reset_counter_reg[31]/C (clocked by sys_clk_pin) and C1/FSM_onehot_RxTxSTATE_reg[0]/S (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#22 Warning
+Large setup violation  
+There is a large setup violation of -3.587 ns between syscon/reset_counter_reg[31]/C (clocked by sys_clk_pin) and C1/rx_count_reg[0]/CE (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#23 Warning
+Large setup violation  
+There is a large setup violation of -3.587 ns between syscon/reset_counter_reg[31]/C (clocked by sys_clk_pin) and C1/rx_count_reg[1]/CE (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#24 Warning
+Large setup violation  
+There is a large setup violation of -3.587 ns between syscon/reset_counter_reg[31]/C (clocked by sys_clk_pin) and C1/rx_count_reg[2]/CE (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#25 Warning
+Large setup violation  
+There is a large setup violation of -3.587 ns between syscon/reset_counter_reg[31]/C (clocked by sys_clk_pin) and C1/rx_count_reg[3]/CE (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#26 Warning
+Large setup violation  
+There is a large setup violation of -3.612 ns between syscon/reset_counter_reg[31]_replica/C (clocked by sys_clk_pin) and C0/send_data_reg[0]/R (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#27 Warning
+Large setup violation  
+There is a large setup violation of -3.612 ns between syscon/reset_counter_reg[31]_replica/C (clocked by sys_clk_pin) and C0/send_data_reg[5]/R (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#28 Warning
+Large setup violation  
+There is a large setup violation of -3.612 ns between syscon/reset_counter_reg[31]_replica/C (clocked by sys_clk_pin) and C0/send_data_reg[6]/R (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#29 Warning
+Large setup violation  
+There is a large setup violation of -3.620 ns between syscon/reset_counter_reg[31]_replica/C (clocked by sys_clk_pin) and C0/STATE_reg[0]/R (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#30 Warning
+Large setup violation  
+There is a large setup violation of -3.620 ns between syscon/reset_counter_reg[31]_replica/C (clocked by sys_clk_pin) and C0/STATE_reg[1]/R (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#31 Warning
+Large setup violation  
+There is a large setup violation of -3.620 ns between syscon/reset_counter_reg[31]_replica/C (clocked by sys_clk_pin) and C0/STATE_reg[2]/R (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#32 Warning
+Large setup violation  
+There is a large setup violation of -3.620 ns between syscon/reset_counter_reg[31]_replica/C (clocked by sys_clk_pin) and C0/prevSTATE_reg[0]/R (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#33 Warning
+Large setup violation  
+There is a large setup violation of -3.620 ns between syscon/reset_counter_reg[31]_replica/C (clocked by sys_clk_pin) and C0/prevSTATE_reg[1]/R (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#34 Warning
+Large setup violation  
+There is a large setup violation of -3.620 ns between syscon/reset_counter_reg[31]_replica/C (clocked by sys_clk_pin) and C0/prevSTATE_reg[2]/R (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#35 Warning
+Large setup violation  
+There is a large setup violation of -3.620 ns between syscon/reset_counter_reg[31]_replica/C (clocked by sys_clk_pin) and C0/slave_select_reg/S (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#36 Warning
+Large setup violation  
+There is a large setup violation of -3.620 ns between syscon/reset_counter_reg[31]_replica/C (clocked by sys_clk_pin) and C1/sclk_previous_reg/S (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#37 Warning
+Large setup violation  
+There is a large setup violation of -3.625 ns between syscon/reset_counter_reg[31]_replica/C (clocked by sys_clk_pin) and C0/begin_transmission_reg/R (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#38 Warning
+Large setup violation  
+There is a large setup violation of -3.625 ns between syscon/reset_counter_reg[31]_replica/C (clocked by sys_clk_pin) and C0/exeRst_reg/S (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#39 Warning
+Large setup violation  
+There is a large setup violation of -3.625 ns between syscon/reset_counter_reg[31]_replica/C (clocked by sys_clk_pin) and C1/FSM_onehot_RxTxSTATE_reg[1]/R (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#40 Warning
+Large setup violation  
+There is a large setup violation of -3.625 ns between syscon/reset_counter_reg[31]_replica/C (clocked by sys_clk_pin) and C1/end_transmission_reg/R (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#41 Warning
+Large setup violation  
+There is a large setup violation of -3.625 ns between syscon/reset_counter_reg[31]_replica/C (clocked by sys_clk_pin) and C1/sclk_buffer_reg/R (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#42 Warning
+Large setup violation  
+There is a large setup violation of -3.694 ns between syscon/reset_counter_reg[31]_replica/C (clocked by sys_clk_pin) and C0/count_ss_reg[0]/R (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#43 Warning
+Large setup violation  
+There is a large setup violation of -3.694 ns between syscon/reset_counter_reg[31]_replica/C (clocked by sys_clk_pin) and C0/count_ss_reg[1]/R (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#44 Warning
+Large setup violation  
+There is a large setup violation of -3.694 ns between syscon/reset_counter_reg[31]_replica/C (clocked by sys_clk_pin) and C0/count_ss_reg[2]/R (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#45 Warning
+Large setup violation  
+There is a large setup violation of -3.694 ns between syscon/reset_counter_reg[31]_replica/C (clocked by sys_clk_pin) and C0/count_ss_reg[3]/R (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#46 Warning
+Large setup violation  
+There is a large setup violation of -3.701 ns between syscon/reset_counter_reg[31]_replica/C (clocked by sys_clk_pin) and C0/count_ss_reg[4]/R (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#47 Warning
+Large setup violation  
+There is a large setup violation of -3.701 ns between syscon/reset_counter_reg[31]_replica/C (clocked by sys_clk_pin) and C0/count_ss_reg[5]/R (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#48 Warning
+Large setup violation  
+There is a large setup violation of -3.701 ns between syscon/reset_counter_reg[31]_replica/C (clocked by sys_clk_pin) and C0/count_ss_reg[6]/R (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#49 Warning
+Large setup violation  
+There is a large setup violation of -3.701 ns between syscon/reset_counter_reg[31]_replica/C (clocked by sys_clk_pin) and C0/count_ss_reg[7]/R (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#50 Warning
+Large setup violation  
+There is a large setup violation of -3.751 ns between syscon/reset_counter_reg[31]_replica/C (clocked by sys_clk_pin) and C0/count_ss_reg[10]/R (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#51 Warning
+Large setup violation  
+There is a large setup violation of -3.751 ns between syscon/reset_counter_reg[31]_replica/C (clocked by sys_clk_pin) and C0/count_ss_reg[11]/R (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#52 Warning
+Large setup violation  
+There is a large setup violation of -3.751 ns between syscon/reset_counter_reg[31]_replica/C (clocked by sys_clk_pin) and C0/count_ss_reg[8]/R (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#53 Warning
+Large setup violation  
+There is a large setup violation of -3.751 ns between syscon/reset_counter_reg[31]_replica/C (clocked by sys_clk_pin) and C0/count_ss_reg[9]/R (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#54 Warning
+Large setup violation  
+There is a large setup violation of -3.837 ns between syscon/reset_counter_reg[31]_replica/C (clocked by sys_clk_pin) and C1/rx_count_reg[0]/R (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#55 Warning
+Large setup violation  
+There is a large setup violation of -3.837 ns between syscon/reset_counter_reg[31]_replica/C (clocked by sys_clk_pin) and C1/rx_count_reg[1]/R (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#56 Warning
+Large setup violation  
+There is a large setup violation of -3.837 ns between syscon/reset_counter_reg[31]_replica/C (clocked by sys_clk_pin) and C1/rx_count_reg[2]/R (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#57 Warning
+Large setup violation  
+There is a large setup violation of -3.837 ns between syscon/reset_counter_reg[31]_replica/C (clocked by sys_clk_pin) and C1/rx_count_reg[3]/R (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#58 Warning
+Large setup violation  
+There is a large setup violation of -4.016 ns between syscon/reset_counter_reg[31]/C (clocked by sys_clk_pin) and C1/spi_clk_count_reg[0]/R (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#59 Warning
+Large setup violation  
+There is a large setup violation of -4.016 ns between syscon/reset_counter_reg[31]/C (clocked by sys_clk_pin) and C1/spi_clk_count_reg[1]/R (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#60 Warning
+Large setup violation  
+There is a large setup violation of -4.016 ns between syscon/reset_counter_reg[31]/C (clocked by sys_clk_pin) and C1/spi_clk_count_reg[2]/R (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#61 Warning
+Large setup violation  
+There is a large setup violation of -4.016 ns between syscon/reset_counter_reg[31]/C (clocked by sys_clk_pin) and C1/spi_clk_count_reg[3]/R (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#62 Warning
+Large setup violation  
+There is a large setup violation of -4.021 ns between syscon/reset_counter_reg[31]/C (clocked by sys_clk_pin) and C1/spi_clk_count_reg[10]/R (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#63 Warning
+Large setup violation  
+There is a large setup violation of -4.021 ns between syscon/reset_counter_reg[31]/C (clocked by sys_clk_pin) and C1/spi_clk_count_reg[11]/R (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#64 Warning
+Large setup violation  
+There is a large setup violation of -4.021 ns between syscon/reset_counter_reg[31]/C (clocked by sys_clk_pin) and C1/spi_clk_count_reg[4]/R (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#65 Warning
+Large setup violation  
+There is a large setup violation of -4.021 ns between syscon/reset_counter_reg[31]/C (clocked by sys_clk_pin) and C1/spi_clk_count_reg[5]/R (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#66 Warning
+Large setup violation  
+There is a large setup violation of -4.021 ns between syscon/reset_counter_reg[31]/C (clocked by sys_clk_pin) and C1/spi_clk_count_reg[6]/R (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#67 Warning
+Large setup violation  
+There is a large setup violation of -4.021 ns between syscon/reset_counter_reg[31]/C (clocked by sys_clk_pin) and C1/spi_clk_count_reg[7]/R (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#68 Warning
+Large setup violation  
+There is a large setup violation of -4.021 ns between syscon/reset_counter_reg[31]/C (clocked by sys_clk_pin) and C1/spi_clk_count_reg[8]/R (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#69 Warning
+Large setup violation  
+There is a large setup violation of -4.021 ns between syscon/reset_counter_reg[31]/C (clocked by sys_clk_pin) and C1/spi_clk_count_reg[9]/R (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-18#1 Warning
+Missing input or output delay  
+An input delay is missing on XRESET relative to the rising and/or falling clock edge(s) of sys_clk_pin.
+Related violations: <none>
+
+

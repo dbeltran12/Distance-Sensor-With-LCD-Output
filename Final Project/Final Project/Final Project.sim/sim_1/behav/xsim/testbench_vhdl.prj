@@ -1,0 +1,19 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../Final Project.srcs/sources_1/new/top.vhd" \
+
+vhdl2008 xil_defaultlib  \
+"../../../../Final Project.srcs/sources_1/new/ToF_Master.vhd" \
+"../../../../Final Project.srcs/sources_1/new/command_lookup.vhd" \
+"../../../../Final Project.srcs/sources_1/new/debounce.vhd" \
+"../../../../Final Project.srcs/sources_1/new/decode_keys.vhd" \
+"../../../../Final Project.srcs/sources_1/new/i2c_master.vhd" \
+"../../../../Final Project.srcs/sources_1/new/master_interface.vhd" \
+"../../../../Final Project.srcs/sources_1/new/pmod_keypad.vhd" \
+"../../../../Final Project.srcs/sources_1/new/spi_interface.vhd" \
+"../../../../Final Project.srcs/sources_1/new/system_controller.vhd" \
+"../../../../Final Project.srcs/sim_1/new/testing_pkg.vhd" \
+"../../../../Final Project.srcs/sim_1/new/testbench.vhd" \
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,10 @@
++====================+====================+==========================+
+| Launch Setup Clock | Launch Hold Clock  | Pin                      |
++====================+====================+==========================+
+| sys_clk_pin        | clk_out2_clk_wiz_0 | ToF/rw_reg/D             |
+| sys_clk_pin        | clk_out2_clk_wiz_0 | ToF/i2c/data_rx_reg[7]/D |
+| sys_clk_pin        | clk_out2_clk_wiz_0 | ToF/i2c/data_rx_reg[4]/D |
+| sys_clk_pin        | clk_out2_clk_wiz_0 | ToF/i2c/data_rx_reg[3]/D |
+| sys_clk_pin        | clk_out2_clk_wiz_0 | ToF/i2c/scl_clk_reg/D    |
+| sys_clk_pin        | clk_out2_clk_wiz_0 | ToF/i2c/data_clk_reg/D   |
++--------------------+--------------------+--------------------------+

@@ -1,0 +1,113 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+| Date         : Sat Dec  7 01:02:19 2024
+| Host         : Daniels-Desktop running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
+| Design       : top
+| Device       : xc7z010
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    35 |
+|    Minimum number of control sets                        |    35 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    72 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    35 |
+| >= 0 to < 4        |     2 |
+| >= 4 to < 6        |     3 |
+| >= 6 to < 8        |     2 |
+| >= 8 to < 10       |    17 |
+| >= 10 to < 12      |     2 |
+| >= 12 to < 14      |     3 |
+| >= 14 to < 16      |     1 |
+| >= 16              |     5 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              13 |            8 |
+| No           | No                    | Yes                    |              50 |           15 |
+| No           | Yes                   | No                     |              15 |            4 |
+| Yes          | No                    | No                     |             223 |           57 |
+| Yes          | No                    | Yes                    |              33 |           11 |
+| Yes          | Yes                   | No                     |              50 |           14 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------------------------+---------------------------------------+-----------------------------+------------------+----------------+--------------+
+|           Clock Signal           |             Enable Signal             |       Set/Reset Signal      | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------------------------+---------------------------------------+-----------------------------+------------------+----------------+--------------+
+|  syscon/clk_wizard/inst/clk_out2 | ToF/SS_i_1_n_0                        | syscon/Q[0]                 |                1 |              1 |         1.00 |
+|  syscon/clk_wizard/inst/clk_out1 | C1/mosi_i_1_n_0                       | syscon/Q[0]                 |                1 |              1 |         1.00 |
+|  syscon/clk_wizard/inst/clk_out2 | ToF/i2c/state_reg[2][0]               | syscon/Q[0]                 |                1 |              4 |         4.00 |
+|  syscon/clk_wizard/inst/clk_out1 | C1/rx_count[3]_i_1_n_0                |                             |                1 |              4 |         4.00 |
+|  syscon/clk_wizard/inst/clk_out1 | syscon/E[0]                           | keypad/count0               |                2 |              5 |         2.50 |
+|  syscon/clk_wizard/inst/clk_out1 | C0/count_sel[5]_i_1_n_0               | syscon/Q[0]                 |                2 |              6 |         3.00 |
+|  syscon/clk_wizard/inst/clk_out1 | C0/send_data[6]_i_1_n_0               | syscon/Q[0]                 |                1 |              6 |         6.00 |
+|  syscon/clk_wizard/inst/clk_out2 | ToF/i2c/state_reg[3]_0[0]             |                             |                1 |              8 |         8.00 |
+|  syscon/clk_wizard/inst/clk_out2 | ToF/i2c/data_rd[7]_i_1_n_0            | syscon/Q[0]                 |                2 |              8 |         4.00 |
+|  syscon/clk_wizard/inst/clk_out2 | ToF/i2c/E[0]                          |                             |                3 |              8 |         2.67 |
+|  syscon/clk_wizard/inst/clk_out2 | ToF/i2c/busy_cnt_reg[0][0]            |                             |                2 |              8 |         4.00 |
+|  syscon/clk_wizard/inst/clk_out2 | ToF/i2c/busy_cnt_reg[0]_0[0]          |                             |                1 |              8 |         8.00 |
+|  syscon/clk_wizard/inst/clk_out2 | ToF/i2c/busy_reg_3[0]                 |                             |                2 |              8 |         4.00 |
+|  syscon/clk_wizard/inst/clk_out2 | ToF/i2c/busy_reg_8[0]                 |                             |                1 |              8 |         8.00 |
+|  syscon/clk_wizard/inst/clk_out2 | ToF/i2c/busy_reg_7[0]                 |                             |                2 |              8 |         4.00 |
+|  syscon/clk_wizard/inst/clk_out2 | ToF/i2c/busy_reg_6[0]                 |                             |                1 |              8 |         8.00 |
+|  syscon/clk_wizard/inst/clk_out2 | ToF/i2c/busy_reg_4[0]                 |                             |                2 |              8 |         4.00 |
+|  syscon/clk_wizard/inst/clk_out2 | ToF/i2c/busy_reg_2[0]                 |                             |                2 |              8 |         4.00 |
+|  syscon/clk_wizard/inst/clk_out2 | ToF/i2c/busy_reg_5[0]                 |                             |                1 |              8 |         8.00 |
+|  syscon/clk_wizard/inst/clk_out2 | ToF/i2c/busy_reg_1[0]                 |                             |                2 |              8 |         4.00 |
+|  syscon/clk_wizard/inst/clk_out2 | ToF/i2c/state_reg[3]_2[0]             |                             |                3 |              8 |         2.67 |
+|  syscon/clk_wizard/inst/clk_out2 | ToF/i2c/state_reg[3]_1[0]             |                             |                2 |              8 |         4.00 |
+|  syscon/clk_wizard/inst/clk_out1 | C1/shift_register[7]_i_1_n_0          | syscon/Q[0]                 |                2 |              8 |         4.00 |
+|  syscon/clk_wizard/inst/clk_out2 | ToF/i2c/busy1                         | syscon/Q[0]                 |                4 |              9 |         2.25 |
+|  syscon/clk_wizard/inst/clk_out2 | ToF/i2c/addr_rw0                      |                             |                3 |             10 |         3.33 |
+|  syscon/clk_wizard/inst/clk_out1 | keypad/FSM_onehot_columns[10]_i_1_n_0 | syscon/Q[0]                 |                3 |             11 |         3.67 |
+|  syscon/clk_wizard/inst/clk_out1 | C0/count_ss[0]_i_1_n_0                | syscon/Q[0]                 |                3 |             12 |         4.00 |
+|  syscon/clk_wizard/inst/clk_out1 | C1/FSM_onehot_RxTxSTATE_reg_n_0_[1]   | C1/spi_clk_count[0]_i_1_n_0 |                3 |             12 |         4.00 |
+|  syscon/clk_wizard/inst/clk_out2 |                                       |                             |                8 |             13 |         1.62 |
+|  syscon/clk_wizard/inst/clk_out1 |                                       | syscon/Q[0]                 |                4 |             15 |         3.75 |
+|  syscon/clk_wizard/inst/clk_out2 |                                       | syscon/Q[0]                 |                8 |             18 |         2.25 |
+|  syscon/clk_wizard/inst/clk_out2 | ToF/SS_cnt0                           |                             |                8 |             32 |         4.00 |
+|  syscon/clk_wizard/inst/clk_out2 | ToF/pause_cnt0                        |                             |                8 |             32 |         4.00 |
+|  XCLK_IBUF_BUFG                  |                                       | XRESET_IBUF                 |                7 |             32 |         4.57 |
+|  syscon/clk_wizard/inst/clk_out2 | ToF/busy_prev0                        |                             |               12 |             33 |         2.75 |
++----------------------------------+---------------------------------------+-----------------------------+------------------+----------------+--------------+
+
+

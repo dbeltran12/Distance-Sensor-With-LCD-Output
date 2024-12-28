@@ -1,0 +1,495 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Sat Dec  7 01:00:41 2024
+# Process ID: 23096
+# Current directory: D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.runs/synth_1
+# Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+# Log file: D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.runs/synth_1/top.vds
+# Journal file: D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.runs/synth_1\vivado.jou
+# Running On: Daniels-Desktop, OS: Windows, CPU Frequency: 3600 MHz, CPU Physical cores: 8, Host memory: 17091 MB
+#-----------------------------------------------------------
+source top.tcl -notrace
+create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 501.293 ; gain = 220.090
+Command: read_checkpoint -auto_incremental -incremental {D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/utils_1/imports/synth_1/top.dcp}
+INFO: [Vivado 12-5825] Read reference checkpoint from D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/utils_1/imports/synth_1/top.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top top -part xc7z010clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 18556
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1345.020 ; gain = 441.070
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-9112] actual for formal port 'reset_n' is neither a static name nor a globally static expression [D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/top.vhd:173]
+INFO: [Synth 8-638] synthesizing module 'top' [D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/top.vhd:47]
+	Parameter RESET_COUNT bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'system_controller' declared at 'D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/system_controller.vhd:35' bound to instance 'syscon' of component 'system_controller' [D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/top.vhd:152]
+INFO: [Synth 8-638] synthesizing module 'system_controller' [D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/system_controller.vhd:47]
+	Parameter RESET_COUNT bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'clk_wiz_0' declared at 'D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.runs/synth_1/.Xil/Vivado-23096-Daniels-Desktop/realtime/clk_wiz_0_stub.vhdl:6' bound to instance 'clk_wizard' of component 'clk_wiz_0' [D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/system_controller.vhd:85]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.runs/synth_1/.Xil/Vivado-23096-Daniels-Desktop/realtime/clk_wiz_0_stub.vhdl:17]
+INFO: [Synth 8-256] done synthesizing module 'system_controller' (0#1) [D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/system_controller.vhd:47]
+	Parameter clk_freq bound to: 100000000 - type: integer 
+	Parameter stable_time bound to: 10 - type: integer 
+INFO: [Synth 8-3491] module 'pmod_keypad' declared at 'D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/pmod_keypad.vhd:26' bound to instance 'keypad' of component 'pmod_keypad' [D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/top.vhd:166]
+INFO: [Synth 8-638] synthesizing module 'pmod_keypad' [D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/pmod_keypad.vhd:38]
+	Parameter clk_freq bound to: 100000000 - type: integer 
+	Parameter stable_time bound to: 10 - type: integer 
+	Parameter clk_freq bound to: 100000000 - type: integer 
+	Parameter stable_time bound to: 10 - type: integer 
+INFO: [Synth 8-3491] module 'debounce' declared at 'D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/debounce.vhd:29' bound to instance 'debounce_keys' of component 'debounce' [D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/pmod_keypad.vhd:263]
+INFO: [Synth 8-638] synthesizing module 'debounce' [D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/debounce.vhd:40]
+	Parameter clk_freq bound to: 100000000 - type: integer 
+	Parameter stable_time bound to: 10 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'debounce' (0#1) [D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/debounce.vhd:40]
+	Parameter clk_freq bound to: 100000000 - type: integer 
+	Parameter stable_time bound to: 10 - type: integer 
+INFO: [Synth 8-3491] module 'debounce' declared at 'D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/debounce.vhd:29' bound to instance 'debounce_keys' of component 'debounce' [D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/pmod_keypad.vhd:263]
+	Parameter clk_freq bound to: 100000000 - type: integer 
+	Parameter stable_time bound to: 10 - type: integer 
+INFO: [Synth 8-3491] module 'debounce' declared at 'D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/debounce.vhd:29' bound to instance 'debounce_keys' of component 'debounce' [D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/pmod_keypad.vhd:263]
+	Parameter clk_freq bound to: 100000000 - type: integer 
+	Parameter stable_time bound to: 10 - type: integer 
+INFO: [Synth 8-3491] module 'debounce' declared at 'D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/debounce.vhd:29' bound to instance 'debounce_keys' of component 'debounce' [D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/pmod_keypad.vhd:263]
+	Parameter clk_freq bound to: 100000000 - type: integer 
+	Parameter stable_time bound to: 10 - type: integer 
+INFO: [Synth 8-3491] module 'debounce' declared at 'D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/debounce.vhd:29' bound to instance 'debounce_keys' of component 'debounce' [D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/pmod_keypad.vhd:263]
+	Parameter clk_freq bound to: 100000000 - type: integer 
+	Parameter stable_time bound to: 10 - type: integer 
+INFO: [Synth 8-3491] module 'debounce' declared at 'D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/debounce.vhd:29' bound to instance 'debounce_keys' of component 'debounce' [D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/pmod_keypad.vhd:263]
+	Parameter clk_freq bound to: 100000000 - type: integer 
+	Parameter stable_time bound to: 10 - type: integer 
+INFO: [Synth 8-3491] module 'debounce' declared at 'D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/debounce.vhd:29' bound to instance 'debounce_keys' of component 'debounce' [D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/pmod_keypad.vhd:263]
+	Parameter clk_freq bound to: 100000000 - type: integer 
+	Parameter stable_time bound to: 10 - type: integer 
+INFO: [Synth 8-3491] module 'debounce' declared at 'D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/debounce.vhd:29' bound to instance 'debounce_keys' of component 'debounce' [D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/pmod_keypad.vhd:263]
+	Parameter clk_freq bound to: 100000000 - type: integer 
+	Parameter stable_time bound to: 10 - type: integer 
+INFO: [Synth 8-3491] module 'debounce' declared at 'D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/debounce.vhd:29' bound to instance 'debounce_keys' of component 'debounce' [D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/pmod_keypad.vhd:263]
+	Parameter clk_freq bound to: 100000000 - type: integer 
+	Parameter stable_time bound to: 10 - type: integer 
+INFO: [Synth 8-3491] module 'debounce' declared at 'D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/debounce.vhd:29' bound to instance 'debounce_keys' of component 'debounce' [D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/pmod_keypad.vhd:263]
+	Parameter clk_freq bound to: 100000000 - type: integer 
+	Parameter stable_time bound to: 10 - type: integer 
+INFO: [Synth 8-3491] module 'debounce' declared at 'D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/debounce.vhd:29' bound to instance 'debounce_keys' of component 'debounce' [D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/pmod_keypad.vhd:263]
+	Parameter clk_freq bound to: 100000000 - type: integer 
+	Parameter stable_time bound to: 10 - type: integer 
+INFO: [Synth 8-3491] module 'debounce' declared at 'D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/debounce.vhd:29' bound to instance 'debounce_keys' of component 'debounce' [D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/pmod_keypad.vhd:263]
+	Parameter clk_freq bound to: 100000000 - type: integer 
+	Parameter stable_time bound to: 10 - type: integer 
+INFO: [Synth 8-3491] module 'debounce' declared at 'D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/debounce.vhd:29' bound to instance 'debounce_keys' of component 'debounce' [D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/pmod_keypad.vhd:263]
+	Parameter clk_freq bound to: 100000000 - type: integer 
+	Parameter stable_time bound to: 10 - type: integer 
+INFO: [Synth 8-3491] module 'debounce' declared at 'D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/debounce.vhd:29' bound to instance 'debounce_keys' of component 'debounce' [D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/pmod_keypad.vhd:263]
+	Parameter clk_freq bound to: 100000000 - type: integer 
+	Parameter stable_time bound to: 10 - type: integer 
+INFO: [Synth 8-3491] module 'debounce' declared at 'D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/debounce.vhd:29' bound to instance 'debounce_keys' of component 'debounce' [D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/pmod_keypad.vhd:263]
+	Parameter clk_freq bound to: 100000000 - type: integer 
+	Parameter stable_time bound to: 10 - type: integer 
+INFO: [Synth 8-3491] module 'debounce' declared at 'D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/debounce.vhd:29' bound to instance 'debounce_keys' of component 'debounce' [D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/pmod_keypad.vhd:263]
+INFO: [Synth 8-256] done synthesizing module 'pmod_keypad' (0#1) [D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/pmod_keypad.vhd:38]
+INFO: [Synth 8-3491] module 'decode_keys' declared at 'D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/decode_keys.vhd:18' bound to instance 'decode' of component 'decode_keys' [D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/top.vhd:180]
+INFO: [Synth 8-638] synthesizing module 'decode_keys' [D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/decode_keys.vhd:27]
+WARNING: [Synth 8-614] signal 'reset' is read in the process but is not in the sensitivity list [D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/decode_keys.vhd:30]
+INFO: [Synth 8-256] done synthesizing module 'decode_keys' (0#1) [D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/decode_keys.vhd:27]
+INFO: [Synth 8-3491] module 'master_interface' declared at 'D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/master_interface.vhd:23' bound to instance 'C0' of component 'master_interface' [D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/top.vhd:189]
+INFO: [Synth 8-638] synthesizing module 'master_interface' [D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/master_interface.vhd:36]
+INFO: [Synth 8-256] done synthesizing module 'master_interface' (0#1) [D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/master_interface.vhd:36]
+INFO: [Synth 8-3491] module 'spi_interface' declared at 'D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/spi_interface.vhd:24' bound to instance 'C1' of component 'spi_interface' [D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/top.vhd:204]
+INFO: [Synth 8-638] synthesizing module 'spi_interface' [D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/spi_interface.vhd:36]
+INFO: [Synth 8-256] done synthesizing module 'spi_interface' (0#1) [D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/spi_interface.vhd:36]
+WARNING: [Synth 8-5640] Port 'data_in' is missing in component declaration [D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/top.vhd:123]
+INFO: [Synth 8-3491] module 'command_lookup' declared at 'D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/command_lookup.vhd:21' bound to instance 'C2' of component 'command_lookup' [D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/top.vhd:219]
+INFO: [Synth 8-638] synthesizing module 'command_lookup' [D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/command_lookup.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'command_lookup' (0#1) [D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/command_lookup.vhd:27]
+INFO: [Synth 8-3491] module 'ToF_Master' declared at 'D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/ToF_Master.vhd:9' bound to instance 'ToF' of component 'ToF_Master' [D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/top.vhd:224]
+INFO: [Synth 8-638] synthesizing module 'ToF_Master' [D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/ToF_Master.vhd:24]
+	Parameter sys_clk_freq bound to: 50000000 - type: integer 
+	Parameter input_clk bound to: 50000000 - type: integer 
+	Parameter bus_clk bound to: 100000 - type: integer 
+INFO: [Synth 8-3491] module 'i2c_master' declared at 'D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/i2c_master.vhd:36' bound to instance 'i2c' of component 'i2c_master' [D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/ToF_Master.vhd:64]
+INFO: [Synth 8-638] synthesizing module 'i2c_master' [D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/i2c_master.vhd:54]
+	Parameter input_clk bound to: 50000000 - type: integer 
+	Parameter bus_clk bound to: 100000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'i2c_master' (0#1) [D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/i2c_master.vhd:54]
+WARNING: [Synth 8-614] signal 'reset' is read in the process but is not in the sensitivity list [D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/ToF_Master.vhd:81]
+INFO: [Synth 8-256] done synthesizing module 'ToF_Master' (0#1) [D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/ToF_Master.vhd:24]
+WARNING: [Synth 8-7043] port width mismatch for port 'data_out': port width = 6, actual width = 32 (integer) [D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/top.vhd:60]
+INFO: [Synth 8-256] done synthesizing module 'top' (0#1) [D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/top.vhd:47]
+WARNING: [Synth 8-7129] Port keys[31] in module ToF_Master is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keys[30] in module ToF_Master is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keys[29] in module ToF_Master is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keys[28] in module ToF_Master is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keys[27] in module ToF_Master is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keys[26] in module ToF_Master is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keys[25] in module ToF_Master is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keys[24] in module ToF_Master is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keys[23] in module ToF_Master is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keys[22] in module ToF_Master is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keys[21] in module ToF_Master is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keys[20] in module ToF_Master is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keys[19] in module ToF_Master is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keys[18] in module ToF_Master is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keys[17] in module ToF_Master is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keys[16] in module ToF_Master is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keys[15] in module ToF_Master is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keys[14] in module ToF_Master is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keys[13] in module ToF_Master is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keys[12] in module ToF_Master is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keys[11] in module ToF_Master is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keys[10] in module ToF_Master is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keys[9] in module ToF_Master is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keys[8] in module ToF_Master is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keys[7] in module ToF_Master is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keys[6] in module ToF_Master is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keys[5] in module ToF_Master is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keys[4] in module ToF_Master is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keys[3] in module ToF_Master is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keys[2] in module ToF_Master is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keys[1] in module ToF_Master is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keys[0] in module ToF_Master is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sel[5] in module command_lookup is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sel[4] in module command_lookup is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1475.926 ; gain = 571.977
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1475.926 ; gain = 571.977
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1475.926 ; gain = 571.977
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 1475.926 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'syscon/clk_wizard'
+Finished Parsing XDC File [d:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'syscon/clk_wizard'
+Parsing XDC File [D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/constrs_1/new/zybo.xdc]
+Finished Parsing XDC File [D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/constrs_1/new/zybo.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/constrs_1/new/zybo.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1575.488 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1575.488 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1575.488 ; gain = 671.539
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1575.488 ; gain = 671.539
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for XCLK. (constraint file  {d:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc}, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for XCLK. (constraint file  {d:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc}, line 5).
+Applied set_property KEEP_HIERARCHY = SOFT for syscon/clk_wizard. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1575.488 ; gain = 671.539
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'columns_reg' in module 'pmod_keypad'
+INFO: [Synth 8-802] inferred FSM for state register 'RxTxSTATE_reg' in module 'spi_interface'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'i2c_master'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE7 |                      00000000001 |                             1111
+                 iSTATE5 |                      00000000010 |                             0111
+                 iSTATE2 |                      00000000100 |                             1011
+                 iSTATE0 |                      00000001000 |                             1101
+                 iSTATE8 |                      00000010000 |                             1110
+                  iSTATE |                      00000100000 |                             0011
+                 iSTATE9 |                      00001000000 |                             0101
+                 iSTATE6 |                      00010000000 |                             0110
+                 iSTATE4 |                      00100000000 |                             1001
+                 iSTATE3 |                      01000000000 |                             1010
+                 iSTATE1 |                      10000000000 |                             1100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'columns_reg' using encoding 'one-hot' in module 'pmod_keypad'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              001 |                               00
+                   rx_tx |                              010 |                               01
+                    hold |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'RxTxSTATE_reg' using encoding 'one-hot' in module 'spi_interface'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                   ready |                        000000001 |                             0000
+                   start |                        000000010 |                             0001
+                 command |                        000000100 |                             0010
+                slv_ack1 |                        000001000 |                             0011
+                      wr |                        000010000 |                             0100
+                slv_ack2 |                        000100000 |                             0110
+                      rd |                        001000000 |                             0101
+                mstr_ack |                        010000000 |                             0111
+                    stop |                        100000000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'i2c_master'
+WARNING: [Synth 8-327] inferring latch for variable 'clear_reg' [D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.srcs/sources_1/new/ToF_Master.vhd:95]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1575.488 ; gain = 671.539
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 2     
+	   2 Input    9 Bit       Adders := 1     
+	   2 Input    6 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 2     
+	   9 Input    4 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 2     
+	   5 Input    3 Bit       Adders := 1     
+	   2 Input    3 Bit       Adders := 1     
+	   2 Input    2 Bit       Adders := 1     
+	   3 Input    2 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 16    
++---Registers : 
+	               32 Bit    Registers := 2     
+	               16 Bit    Registers := 3     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 20    
+	                7 Bit    Registers := 1     
+	                6 Bit    Registers := 2     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 4     
+	                3 Bit    Registers := 3     
+	                2 Bit    Registers := 16    
+	                1 Bit    Registers := 36    
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 5     
+	   4 Input   32 Bit        Muxes := 4     
+	  16 Input   32 Bit        Muxes := 1     
+	   6 Input   32 Bit        Muxes := 1     
+	   2 Input   16 Bit        Muxes := 27    
+	  11 Input   16 Bit        Muxes := 4     
+	   2 Input   15 Bit        Muxes := 2     
+	   2 Input   14 Bit        Muxes := 1     
+	   2 Input   13 Bit        Muxes := 1     
+	   2 Input    9 Bit        Muxes := 10    
+	   9 Input    9 Bit        Muxes := 1     
+	   3 Input    8 Bit        Muxes := 1     
+	   6 Input    8 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 10    
+	   4 Input    8 Bit        Muxes := 7     
+	  16 Input    7 Bit        Muxes := 1     
+	   7 Input    6 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 2     
+	  11 Input    4 Bit        Muxes := 1     
+	  16 Input    4 Bit        Muxes := 1     
+	   3 Input    4 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 5     
+	   3 Input    3 Bit        Muxes := 1     
+	  16 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 3     
+	  16 Input    1 Bit        Muxes := 43    
+	   7 Input    1 Bit        Muxes := 9     
+	   2 Input    1 Bit        Muxes := 52    
+	   3 Input    1 Bit        Muxes := 6     
+	   9 Input    1 Bit        Muxes := 7     
+	   6 Input    1 Bit        Muxes := 3     
+	   4 Input    1 Bit        Muxes := 22    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port keys[31] in module ToF_Master is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keys[30] in module ToF_Master is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keys[29] in module ToF_Master is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keys[28] in module ToF_Master is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keys[27] in module ToF_Master is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keys[26] in module ToF_Master is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keys[25] in module ToF_Master is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keys[24] in module ToF_Master is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keys[23] in module ToF_Master is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keys[22] in module ToF_Master is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keys[21] in module ToF_Master is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keys[20] in module ToF_Master is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keys[19] in module ToF_Master is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keys[18] in module ToF_Master is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keys[17] in module ToF_Master is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keys[16] in module ToF_Master is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keys[15] in module ToF_Master is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keys[14] in module ToF_Master is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keys[13] in module ToF_Master is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keys[12] in module ToF_Master is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keys[11] in module ToF_Master is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keys[10] in module ToF_Master is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keys[9] in module ToF_Master is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keys[8] in module ToF_Master is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keys[7] in module ToF_Master is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keys[6] in module ToF_Master is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keys[5] in module ToF_Master is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keys[4] in module ToF_Master is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keys[3] in module ToF_Master is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keys[2] in module ToF_Master is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keys[1] in module ToF_Master is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keys[0] in module ToF_Master is either unconnected or has no load
+WARNING: [Synth 8-3332] Sequential element (ToF/clear_reg) is unused and will be removed from module top.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1575.488 ; gain = 671.539
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 1575.488 ; gain = 671.539
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1575.488 ; gain = 671.539
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1575.488 ; gain = 671.539
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1575.488 ; gain = 671.539
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1575.488 ; gain = 671.539
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1575.488 ; gain = 671.539
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1575.488 ; gain = 671.539
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1575.488 ; gain = 671.539
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1575.488 ; gain = 671.539
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |clk_wiz_0     |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+---------------+------+
+|      |Cell           |Count |
++------+---------------+------+
+|1     |clk_wiz_0_bbox |     1|
+|2     |CARRY4         |    46|
+|3     |LUT1           |     9|
+|4     |LUT2           |   156|
+|5     |LUT3           |    34|
+|6     |LUT4           |    46|
+|7     |LUT5           |    66|
+|8     |LUT6           |   150|
+|9     |FDCE           |    42|
+|10    |FDPE           |    41|
+|11    |FDRE           |   296|
+|12    |FDSE           |     5|
+|13    |IBUF           |     3|
+|14    |IOBUF          |     2|
+|15    |OBUF           |     9|
++------+---------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1575.488 ; gain = 671.539
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 35 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:30 . Memory (MB): peak = 1575.488 ; gain = 571.977
+Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1575.488 ; gain = 671.539
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1575.488 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 48 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1575.488 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 2 instances
+
+Synth Design complete | Checksum: 9e25b110
+INFO: [Common 17-83] Releasing license: Synthesis
+74 Infos, 74 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1575.488 ; gain = 1059.953
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1575.488 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/Xilinx/ECE_524L/Final Project/Final Project/Final Project.runs/synth_1/top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Dec  7 01:01:27 2024...
